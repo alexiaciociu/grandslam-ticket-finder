@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baseline — Bilete la turnee de tenis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <span class="logo">Baseline</span>
+    <nav class="nav">
+      <a href="#turnee">Turnee</a>
+      <a href="#cum-functioneaza">Cum funcționează</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <h1>Găsește locul tău<br>la marginea terenului.</h1>
+    <p class="hero-sub">Compară biletele la turneele de tenis din acest sezon — după țară, după dată sau direct după numele turneului.</p>
+
+    <div class="search-panel">
+      <input type="radio" id="tab-country" name="search-tab" class="tab-radio" checked>
+      <input type="radio" id="tab-date" name="search-tab" class="tab-radio">
+      <input type="radio" id="tab-tournament" name="search-tab" class="tab-radio">
+
+      <div class="tabs">
+        <label for="tab-country">După țară</label>
+        <label for="tab-date">După dată</label>
+        <label for="tab-tournament">După turneu</label>
+      </div>
+
+      <div class="panel panel-country">
+        <div class="field autocomplete-wrapper">
+          <label class="field-label" for="country-input">Țară</label>
+          <input type="text" id="country-input" placeholder="Tastează țara (ex: Ro, Sp...)" autocomplete="off">
+          <div class="suggestions-list" id="country-suggestions"></div>
+        </div>
+        <button class="search-btn">Caută turnee</button>
+      </div>
+
+      <div class="panel panel-date">
+        <div class="field">
+          <label class="field-label" for="date-from">De la</label>
+          <input type="date" id="date-from" value="2026-01-01">
+        </div>
+        <div class="field">
+          <label class="field-label" for="date-to">Până la</label>
+          <input type="date" id="date-to" value="2026-12-31">
+        </div>
+        <button class="search-btn">Caută turnee</button>
+      </div>
+
+      <div class="panel panel-tournament">
+        <div class="field">
+          <label class="field-label" for="tournament-select">Turneu</label>
+          <select id="tournament-select">
+            <option value="">Alege un turneu</option>
+            <option>Australian Open</option>
+            <option>Monte-Carlo Masters</option>
+            <option>Mutua Madrid Open</option>
+            <option>Internazionali BNL d'Italia</option>
+            <option>Roland Garros</option>
+            <option>Terra Wortmann Open</option>
+            <option>Wimbledon</option>
+            <option>Bucharest Open</option>
+            <option>Cincinnati Open</option>
+            <option>US Open</option>
+          </select>
+        </div>
+        <button class="search-btn">Vezi disponibilitate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="turnee">
+  <div class="wrap">
+    <div class="results-head">
+      <h2>Exploreaza Turneele Disponibile</h2>
+      <span class="results-count">10 turnee</span>
+    </div>
+
+    <div class="ticket-grid">
+
+      <article class="ticket-card" data-surface="hard">
+        <div class="ticket-main">
+          <span class="surface-tag surface-hard">Hard</span>
+          <h3>Australian Open</h3>
+          <p class="ticket-loc">Melbourne, Australia</p>
+          <p class="ticket-date">19 ian – 01 feb 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">55 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card" data-surface="clay">
+        <div class="ticket-main">
+          <span class="surface-tag surface-clay">Zgură</span>
+          <h3>Monte-Carlo Masters</h3>
+          <p class="ticket-loc">Roquebrune-Cap-Martin, Monaco</p>
+          <p class="ticket-date">12 – 19 apr 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">60 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card" data-surface="clay">
+        <div class="ticket-main">
+          <span class="surface-tag surface-clay">Zgură</span>
+          <h3>Mutua Madrid Open</h3>
+          <p class="ticket-loc">Madrid, Spania</p>
+          <p class="ticket-date">22 apr – 03 mai 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">45 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card" data-surface="clay">
+        <div class="ticket-main">
+          <span class="surface-tag surface-clay">Zgură</span>
+          <h3>Internazionali BNL d'Italia</h3>
+          <p class="ticket-loc">Roma, Italia</p>
+          <p class="ticket-date">06 – 17 mai 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">40 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card ticket-featured" data-surface="clay">
+        <div class="ticket-main">
+          <span class="surface-tag surface-clay">Zgură</span>
+          <h3>Roland Garros</h3>
+          <p class="ticket-loc">Paris, Franța</p>
+          <p class="ticket-date">24 mai – 07 iun 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">65 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card" data-surface="grass">
+        <div class="ticket-main">
+          <span class="surface-tag surface-grass">Iarbă</span>
+          <h3>Terra Wortmann Open</h3>
+          <p class="ticket-loc">Halle, Germania</p>
+          <p class="ticket-date">15 – 21 iun 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">25 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card ticket-featured" data-surface="grass">
+        <div class="ticket-main">
+          <span class="surface-tag surface-grass">Iarbă</span>
+          <h3>Wimbledon</h3>
+          <p class="ticket-loc">Londra, Marea Britanie</p>
+          <p class="ticket-date">29 iun – 12 iul 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">95 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card" data-surface="clay">
+        <div class="ticket-main">
+          <span class="surface-tag surface-clay">Zgură</span>
+          <h3>Bucharest Open</h3>
+          <p class="ticket-loc">București, România</p>
+          <p class="ticket-date">13 – 19 iul 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">20 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card" data-surface="hard">
+        <div class="ticket-main">
+          <span class="surface-tag surface-hard">Hard</span>
+          <h3>Cincinnati Open</h3>
+          <p class="ticket-loc">Cincinnati, SUA</p>
+          <p class="ticket-date">15 – 24 aug 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">35 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+      <article class="ticket-card ticket-featured" data-surface="hard">
+        <div class="ticket-main">
+          <span class="surface-tag surface-hard">Hard</span>
+          <h3>US Open</h3>
+          <p class="ticket-loc">New York, SUA</p>
+          <p class="ticket-date">31 aug – 13 sep 2026</p>
+        </div>
+        <div class="ticket-stub">
+          <span class="stub-label">de la</span>
+          <span class="stub-price">80 €</span>
+          <button class="stub-btn">Vezi bilete</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="how" id="cum-functioneaza">
+  <div class="wrap how-inner">
+    <h2>Cum funcționează</h2>
+    <ol class="how-list">
+      <li><strong>Alegi turneul</strong> — după țară, dată sau nume, direct din bara de căutare.</li>
+      <li><strong>Trimiți o cerere de bilete</strong> — completezi un formular scurt, fără plată online.</li>
+      <li><strong>Confirmăm disponibilitatea</strong> — și îți trimitem instrucțiunile de plată separat.</li>
+    </ol>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Baseline — proiect realizat în scop academic. Prețurile și disponibilitatea sunt orientative, nu provin de la organizatorii turneelor.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
