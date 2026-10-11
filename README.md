@@ -28,4 +28,5 @@ The goal is to provide a seamless, modern, and responsive user interface for ten
 ---
 
 ## 📸 Screenshots
-*(Add screenshots or GIFs of your working app here once available)*
+<img width="1908" height="926" alt="image" src="https://github.com/user-attachments/assets/640f413a-f537-488f-a564-ec707b2b6632" />
+
